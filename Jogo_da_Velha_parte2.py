@@ -7,6 +7,7 @@ class Jogo:
     def recebe_jogada(self, linha, coluna):
         if self.A[linha][coluna] == 0:        
             self.A[linha][coluna]= self.jogador
+        
         if self.jogador == 1:
             self.jogador == 2
         else:
@@ -35,7 +36,3 @@ class Jogo:
             
     def limpa_jogada(self):
         self.tabuleiro = [[0,0,0], [0,0,0], [0,0,0]]
-        if self.jogador == 1:
-            self.jogador == 1
-        else:
-            self.jogador == 2
