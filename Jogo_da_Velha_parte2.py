@@ -31,3 +31,10 @@ class Jogo:
             return 0 
         else:
             return -1
+            
+    def limpa_jogada(self):
+        self.tabuleiro = [[0,0,0], [0,0,0], [0,0,0]]
+        if self.jogador == 1:
+            self.jogador == 2
+        else:
+            self.jogador == 2
