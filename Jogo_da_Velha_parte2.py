@@ -5,11 +5,12 @@ class Jogo:
         self.A = [[0,0,0], [0,0,0], [0,0,0]]
         
     def recebe_jogada(self, linha, coluna):
-        self.A[linha][coluna]= self.jogador
+        if self.A[linha][coluna] == 0:        
+            self.A[linha][coluna]= self.jogador
         if self.jogador == 1:
             self.jogador == 2
         else:
-            self.jogador == 2
+            self.jogador == 1
             
     def verifica_ganhador(self):
         horizontal1 = self.A[0][0]==self.A[0][1]==self.A[0][2]
@@ -35,6 +36,6 @@ class Jogo:
     def limpa_jogada(self):
         self.tabuleiro = [[0,0,0], [0,0,0], [0,0,0]]
         if self.jogador == 1:
-            self.jogador == 2
+            self.jogador == 1
         else:
             self.jogador == 2
