@@ -58,7 +58,7 @@ class Tabuleiro:
         
         self.label = tk.Label(self.window, text = "Próxima jogada: X")
         self.label.grid(row = 3)
-        self.label.configure(height=1)A
+        self.label.configure(height=1)
         
     def clicar1 (self):
         self.meu_jogo.recebe_jogada(0, 0)
