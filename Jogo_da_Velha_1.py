@@ -64,9 +64,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(0, 0)
         self.meu_jogo.jogador
         if self.meu_jogo.jogador == 1:
-            self.botao9.configure(text="X")
+            self.botao1.configure(text="X")
         else:
-            self.botao9.configure(text="O")
+            self.botao1.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
@@ -74,9 +74,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(0, 1)
         self.meu_jogo.jogador
         if self.meu_jogo.jogador == 1:
-            self.botao9.configure(text="X")
+            self.botao2.configure(text="X")
         else:
-            self.botao9.configure(text="O")
+            self.botao2.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
@@ -84,9 +84,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(0, 2)
         self.meu_jogo.jogador
         if self.meu_jogo.jogador == 1:
-            self.botao9.configure(text="X")
+            self.botao3.configure(text="X")
         else:
-            self.botao9.configure(text="O")
+            self.botao3.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
@@ -94,9 +94,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(1, 0)
         self.meu_jogo.jogador
         if self.meu_jogo.jogador == 1:
-            self.botao9.configure(text="X")
+            self.botao4.configure(text="X")
         else:
-            self.botao9.configure(text="O")
+            self.botao4.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
@@ -104,9 +104,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(1, 1)
         self.meu_jogo.jogador
         if self.meu_jogo.jogador == 1:
-            self.botao9.configure(text="X")
+            self.botao5.configure(text="X")
         else:
-            self.botao9.configure(text="O")
+            self.botao5.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
@@ -114,9 +114,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(1, 2)
         self.meu_jogo.jogador
         if self.meu_jogo.jogador == 1:
-            self.botao9.configure(text="X")
+            self.botao6.configure(text="X")
         else:
-            self.botao9.configure(text="O")
+            self.botao6.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
@@ -124,9 +124,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(2, 0)
         self.meu_jogo.jogador
         if self.meu_jogo.jogador == 1:
-            self.botao9.configure(text="X")
+            self.botao7.configure(text="X")
         else:
-            self.botao9.configure(text="O")
+            self.botao7.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
@@ -134,9 +134,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(2, 1)
         self.meu_jogo.jogador
         if self.meu_jogo.jogador == 1:
-            self.botao9.configure(text="X")
+            self.botao8.configure(text="X")
         else:
-            self.botao9.configure(text="O")
+            self.botao8.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
