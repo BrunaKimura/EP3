@@ -58,59 +58,95 @@ class Tabuleiro:
         
         self.label = tk.Label(self.window, text = "Próxima jogada: X")
         self.label.grid(row = 3)
-        self.label.configure(height=1)
+        self.label.configure(height=1)A
         
     def clicar1 (self):
         self.meu_jogo.recebe_jogada(0, 0)
         self.meu_jogo.jogador
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar2 (self):
         self.meu_jogo.recebe_jogada(0, 1)
         self.meu_jogo.jogador
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar3 (self):
         self.meu_jogo.recebe_jogada(0, 2)
         self.meu_jogo.jogador
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar4 (self):
         self.meu_jogo.recebe_jogada(1, 0)
         self.meu_jogo.jogador
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar5 (self):
         self.meu_jogo.recebe_jogada(1, 1)
         self.meu_jogo.jogador
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar6 (self):
         self.meu_jogo.recebe_jogada(1, 2)
         self.meu_jogo.jogador
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar7 (self):
         self.meu_jogo.recebe_jogada(2, 0)
         self.meu_jogo.jogador
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar8 (self):
         self.meu_jogo.recebe_jogada(2, 1)
         self.meu_jogo.jogador
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar9 (self):
         self.meu_jogo.recebe_jogada(2, 2)
         self.meu_jogo.jogador 
+        if self.meu_jogo.jogador == 1:
+            self.botao9.configure(text="X")
+        else:
+            self.botao9.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
@@ -125,8 +161,7 @@ class Tabuleiro:
         if self.label["text"] == ("Próxima jogada: X"):
             self.label["text"] == ("Próxima jogada: O")
         elif self.label["text"] == ("Próxima jogada: O"):
-            self.label["text"] == ("Próxima jogada: X") 
-            
+            self.label["text"] == ("Próxima jogada: X")       
             
     def iniciar(self):
         self.window.mainloop() 
