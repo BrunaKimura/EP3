@@ -63,51 +63,55 @@ class Tabuleiro:
     def clicar1 (self):
         self.meu_jogo.recebe_jogada(0, 0)
         self.meu_jogo.jogador
+        self.mudar_Label()
         self.verifica()
         
     def clicar2 (self):
         self.meu_jogo.recebe_jogada(0, 1)
         self.meu_jogo.jogador
+        self.mudar_Label()
         self.verifica()
         
     def clicar3 (self):
         self.meu_jogo.recebe_jogada(0, 2)
         self.meu_jogo.jogador
+        self.mudar_Label()
         self.verifica()
         
     def clicar4 (self):
         self.meu_jogo.recebe_jogada(1, 0)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
-            self.botao4.configure(text="X")
-        else:
-            self.botao4.configure(text="O")
         self.mudar_Label()
         self.verifica()
         
     def clicar5 (self):
         self.meu_jogo.recebe_jogada(1, 1)
         self.meu_jogo.jogador
+        self.mudar_Label()
         self.verifica()
         
     def clicar6 (self):
         self.meu_jogo.recebe_jogada(1, 2)
         self.meu_jogo.jogador
+        self.mudar_Label()
         self.verifica()
         
     def clicar7 (self):
         self.meu_jogo.recebe_jogada(2, 0)
         self.meu_jogo.jogador
+        self.mudar_Label()
         self.verifica()
         
     def clicar8 (self):
         self.meu_jogo.recebe_jogada(2, 1)
         self.meu_jogo.jogador
+        self.mudar_Label()
         self.verifica()
         
     def clicar9 (self):
         self.meu_jogo.recebe_jogada(2, 2)
-        self.meu_jogo.jogador  
+        self.meu_jogo.jogador 
+        self.mudar_Label()
         self.verifica()
         
     def verifica(self):
@@ -116,6 +120,12 @@ class Tabuleiro:
             self.meu_jogo.limpa_jogada()
         else:
             return -1
+            
+    def mudar_Label(self):
+        if self.label["text"] == ("Próxima jogada: X"):
+            self.label["text"] == ("Próxima jogada: O")
+        elif self.label["text"] == ("Próxima jogada: O"):
+            self.label["text"] == ("Próxima jogada: X") 
             
             
     def iniciar(self):
