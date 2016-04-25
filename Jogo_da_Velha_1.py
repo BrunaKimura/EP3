@@ -60,6 +60,10 @@ class Tabuleiro:
         self.label.grid(row = 3)
         self.label.configure(height=1)
         
+        self.label2 = tk.Label(self.window, text = "O vencedor é: ")
+        self.label2.grid(row = 4)
+        self.label2.configure(height=1)
+        
     def clicar1 (self):
         self.meu_jogo.recebe_jogada(0, 0)
         self.meu_jogo.jogador
@@ -154,13 +158,10 @@ class Tabuleiro:
         self.meu_jogo.verifica_ganhador()
         if self.meu_jogo.verifica_ganhador == (1 or 2 or 0):
             if self.meu_jogo.jogador == 1:         
-                self.label = tk.Label(self.window, text = "O vencedor é: X")
-                self.label.grid(row = 4)
-                self.label.configure(height=1)  
+                self.label2["text"] = "O vencedor é: X"
+                
             else:
-                self.label = tk.Label(self.window, text = "O vencedor é: O")
-                self.label.grid(row = 4)
-                self.label.configure(height=1)
+                self.label2["text"] = "O vencedor é:O"
             self.meu_jogo.limpa_jogada()
         else:
             return -1
