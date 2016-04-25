@@ -16,7 +16,7 @@ class Jogo:
             self.jogador = 1
             
     def verifica_ganhador(self):
-        #todos os modos possíveis de ganhar o jogo.
+         #todos modos possíveis de ganhar  
         self.horizontal1 = self.A[0][0]==self.A[0][1] and self.A[0][0]==self.A[0][2]
         self.horizontal2 = self.A[1][0]==self.A[1][1] and self.A[1][0]==self.A[1][2]
         self.horizontal3 = self.A[2][0]==self.A[2][1] and self.A[2][0]==self.A[2][2]
