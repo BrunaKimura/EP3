@@ -9,9 +9,9 @@ class Jogo:
             self.A[linha][coluna]= self.jogador
         
         if self.jogador == 1:
-            self.jogador == 2
+            self.jogador = 2
         else:
-            self.jogador == 1
+            self.jogador = 1
             
     def verifica_ganhador(self):
         horizontal1 = self.A[0][0]==self.A[0][1] and self.A[0][0]==self.A[0][2]

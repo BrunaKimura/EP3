@@ -158,9 +158,9 @@ class Tabuleiro:
             return -1
             
     def mudar_Label(self):
-        if self.label["text"] == "Próxima jogada: X":
+        if self.meu_jogo.jogador == 1:
             self.label["text"] = "Próxima jogada: O"
-        elif self.label["text"] == "Próxima jogada: O":
+        else:
             self.label["text"] = "Próxima jogada: X"  
             
     def iniciar(self):
