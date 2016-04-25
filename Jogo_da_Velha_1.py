@@ -24,7 +24,7 @@ class Tabuleiro:
     def clicar1 (self):
         self.meu_jogo.recebe_jogada(0, 0)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[0][0] == 1:
             self.botao1.configure(text="X")
         else:
             self.botao1.configure(text="O")
@@ -34,7 +34,7 @@ class Tabuleiro:
     def clicar2 (self):
         self.meu_jogo.recebe_jogada(0, 1)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[0][1] == 1:
             self.botao2.configure(text="X")
         else:
             self.botao2.configure(text="O")
@@ -44,7 +44,7 @@ class Tabuleiro:
     def clicar3 (self):
         self.meu_jogo.recebe_jogada(0, 2)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[0][2] == 1:
             self.botao3.configure(text="X")
         else:
             self.botao3.configure(text="O")
@@ -54,7 +54,7 @@ class Tabuleiro:
     def clicar4 (self):
         self.meu_jogo.recebe_jogada(1, 0)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[1][0] == 1:
             self.botao4.configure(text="X")
         else:
             self.botao4.configure(text="O")
@@ -64,7 +64,7 @@ class Tabuleiro:
     def clicar5 (self):
         self.meu_jogo.recebe_jogada(1, 1)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[1][1] == 1:
             self.botao5.configure(text="X")
         else:
             self.botao5.configure(text="O")
@@ -74,7 +74,7 @@ class Tabuleiro:
     def clicar6 (self):
         self.meu_jogo.recebe_jogada(1, 2)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[1][2] == 1:
             self.botao6.configure(text="X")
         else:
             self.botao6.configure(text="O")
@@ -84,7 +84,7 @@ class Tabuleiro:
     def clicar7 (self):
         self.meu_jogo.recebe_jogada(2, 0)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[2][0] == 1:
             self.botao7.configure(text="X")
         else:
             self.botao7.configure(text="O")
@@ -94,7 +94,7 @@ class Tabuleiro:
     def clicar8 (self):
         self.meu_jogo.recebe_jogada(2, 1)
         self.meu_jogo.jogador
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[2][1] == 1:
             self.botao8.configure(text="X")
         else:
             self.botao8.configure(text="O")
@@ -104,7 +104,7 @@ class Tabuleiro:
     def clicar9 (self):
         self.meu_jogo.recebe_jogada(2, 2)
         self.meu_jogo.jogador 
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.A[2][2] == 1:
             self.botao9.configure(text="X")
         else:
             self.botao9.configure(text="O")
@@ -112,20 +112,20 @@ class Tabuleiro:
         self.verifica()
         
     def verifica(self):
-        self.meu_jogo.verifica_ganhador()
-        if self.meu_jogo.verifica_ganhador == (1 or 2 or 0):
-            if self.meu_jogo.jogador == 1:         
+        if self.meu_jogo.verifica_ganhador() == (1 or 2 or 0):
+            if self.meu_jogo.verifica_ganhador() == 1:         
                 self.label2["text"] = "O vencedor é: X"
-                
+            elif self.meu_jogo.verifica_ganhador() == 2:         
+                self.label2["text"] = "O vencedor é: O"
             else:
-                self.label2["text"] = "O vencedor é:O"
-            self.cria_botao()
+                self.label2["text"] = "O vencedor é:VELHA!"
             self.meu_jogo.limpa_jogada()
+            self.cria_botao()
         else:
             return -1
             
     def mudar_Label(self):
-        if self.meu_jogo.jogador == 1:
+        if self.meu_jogo.jogador == 2:
             self.label["text"] = "Próxima jogada: O"
         else:
             self.label["text"] = "Próxima jogada: X"  
@@ -175,7 +175,7 @@ class Tabuleiro:
         self.botao9.grid(row = 2, column = 2)
         self.botao9.configure(command = self.clicar9)
         self.botao9.configure(height=7, width=14)
-    
+
     def iniciar(self):
         self.window.mainloop() 
 
