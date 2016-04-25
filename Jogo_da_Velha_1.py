@@ -112,7 +112,8 @@ class Tabuleiro:
         self.verifica()
         
     def verifica(self):
-        if self.meu_jogo.verifica_ganhador() == (1 or 2 or 0):
+        print(self.meu_jogo.verifica_ganhador())        
+        if self.meu_jogo.verifica_ganhador() == (1 or 2 or 0):           
             if self.meu_jogo.verifica_ganhador() == 1:         
                 self.label2["text"] = "O vencedor é: X"
             elif self.meu_jogo.verifica_ganhador() == 2:         
@@ -133,47 +134,47 @@ class Tabuleiro:
     def cria_botao(self):
         self.botao1 = tk.Button(self.window)
         self.botao1.grid(row = 0, column = 0)
-        self.botao1.configure(command = self.clicar1)
+        self.botao1.configure(command = self.clicar1())
         self.botao1.configure(height=7, width=14)
 
         self.botao2 = tk.Button(self.window)
         self.botao2.grid(row = 0, column = 1)
-        self.botao2.configure(command = self.clicar2)
+        self.botao2.configure(command = self.clicar2())
         self.botao2.configure(height=7, width=14)
 
         self.botao3 = tk.Button(self.window)
         self.botao3.grid(row = 0, column = 2)
-        self.botao3.configure(command = self.clicar3)
+        self.botao3.configure(command = self.clicar3())
         self.botao3.configure(height=7, width=14)
 
         self.botao4 = tk.Button(self.window)
         self.botao4.grid(row = 1, column = 0)
-        self.botao4.configure(command = self.clicar4)
+        self.botao4.configure(command = self.clicar4())
         self.botao4.configure(height=7, width=14)
 
         self.botao5 = tk.Button(self.window)
         self.botao5.grid(row = 1, column = 1)
-        self.botao5.configure(command = self.clicar5)
+        self.botao5.configure(command = self.clicar5())
         self.botao5.configure(height=7, width=14)
 
         self.botao6 = tk.Button(self.window)
         self.botao6.grid(row = 1, column = 2)
-        self.botao6.configure(command = self.clicar6)
+        self.botao6.configure(command = self.clicar6())
         self.botao6.configure(height=7, width=14)
 
         self.botao7 = tk.Button(self.window)
         self.botao7.grid(row = 2, column = 0)
-        self.botao7.configure(command = self.clicar7)
+        self.botao7.configure(command = self.clicar7())
         self.botao7.configure(height=7, width=14)
 
         self.botao8 = tk.Button(self.window)
         self.botao8.grid(row = 2, column = 1)
-        self.botao8.configure(command = self.clicar8)
+        self.botao8.configure(command = self.clicar8())
         self.botao8.configure(height=7, width=14)
 
         self.botao9 = tk.Button(self.window)
         self.botao9.grid(row = 2, column = 2)
-        self.botao9.configure(command = self.clicar9)
+        self.botao9.configure(command = self.clicar9())
         self.botao9.configure(height=7, width=14)
 
     def iniciar(self):
