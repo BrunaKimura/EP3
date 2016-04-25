@@ -155,13 +155,13 @@ class Tabuleiro:
         self.verifica()
         
     def verifica(self):
-        self.meu_jogo.verifica_ganhador()
-        if self.meu_jogo.verifica_ganhador == (1 or 2 or 0):
-            if self.meu_jogo.jogador == 1:         
+        if self.meu_jogo.verifica_ganhador() == (1 or 2 or 0):
+            if self.meu_jogo.verifica_ganhador() == 1:         
                 self.label2["text"] = "O vencedor é: X"
-                
+            elif self.meu_jogo.verifica_ganhador() == 2:         
+                self.label2["text"] = "O vencedor é: O"
             else:
-                self.label2["text"] = "O vencedor é:O"
+                self.label2["text"] = "O vencedor é:VELHA!"
             self.meu_jogo.limpa_jogada()
         else:
             return -1
