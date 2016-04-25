@@ -154,14 +154,15 @@ class Tabuleiro:
         self.mudar_Label()
         self.verifica()
         
-    def verifica(self):
-        if self.meu_jogo.verifica_ganhador() == (1 or 2 or 0):
-            if self.meu_jogo.verifica_ganhador() == 1:         
-                self.label2["text"] = "O vencedor é: X"
-            elif self.meu_jogo.verifica_ganhador() == 2:         
-                self.label2["text"] = "O vencedor é: O"
-            else:
-                self.label2["text"] = "O vencedor é:VELHA!"
+    def verifica(self): 
+        if self.meu_jogo.verifica_ganhador() == 1:         
+              self.label2["text"] = "O vencedor é: X"
+              self.meu_jogo.limpa_jogada()
+        elif self.meu_jogo.verifica_ganhador() == 2:         
+            self.label2["text"] = "O vencedor é: O"
+            self.meu_jogo.limpa_jogada()
+        elif self.meu_jogo.verifica_ganhador() == 0:
+            self.label2["text"] = "O vencedor é:VELHA!"
             self.meu_jogo.limpa_jogada()
         else:
             return -1
