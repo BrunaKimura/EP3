@@ -17,24 +17,24 @@ class Jogo:
             
     def verifica_ganhador(self):
         #todos os modos possíveis de ganhar o jogo.
-        horizontal1 = self.A[0][0]==self.A[0][1] and self.A[0][0]==self.A[0][2]
-        horizontal2 = self.A[1][0]==self.A[1][1] and self.A[1][0]==self.A[1][2]
-        horizontal3 = self.A[2][0]==self.A[2][1] and self.A[2][0]==self.A[2][2]
+        self.horizontal1 = self.A[0][0]==self.A[0][1] and self.A[0][0]==self.A[0][2]
+        self.horizontal2 = self.A[1][0]==self.A[1][1] and self.A[1][0]==self.A[1][2]
+        self.horizontal3 = self.A[2][0]==self.A[2][1] and self.A[2][0]==self.A[2][2]
         
-        vertical1 = self.A[0][0]==self.A[1][0] and self.A[0][0]==self.A[2][0]
-        vertical2 = self.A[0][1]==self.A[1][1] and self.A[0][1]==self.A[2][1]
-        vertical3 = self.A[0][2]==self.A[1][2] and self.A[0][2]==self.A[2][2]
+        self.vertical1 = self.A[0][0]==self.A[1][0] and self.A[0][0]==self.A[2][0]
+        self.vertical2 = self.A[0][1]==self.A[1][1] and self.A[0][1]==self.A[2][1]
+        self.vertical3 = self.A[0][2]==self.A[1][2] and self.A[0][2]==self.A[2][2]
         
-        diagonal1 = self.A[0][0]==self.A[1][1] and self.A[0][0]==self.A[2][2]
-        diagonal2 = self.A[0][2]==self.A[0][1] and self.A[0][2]==self.A[2][0]
+        self.diagonal1 = self.A[0][0]==self.A[1][1] and self.A[0][0]==self.A[2][2]
+        self.diagonal2 = self.A[0][2]==self.A[0][1] and self.A[0][2]==self.A[2][0]
         
         #Conferir quem ganhou o jogo.
-        if horizontal1 or horizontal2 or horizontal3 or vertical1 or vertical2 or vertical3 or diagonal1 or diagonal2 == 1:
+        if (self.horizontal1 or self.horizontal2 or self.horizontal3 or self.vertical1 or self.vertical2 or self.vertical3 or self.diagonal1 or self.diagonal2) == (1):
             return 1
-        elif horizontal1 or horizontal2 or horizontal3 or vertical1 or vertical2 or vertical3 or diagonal1 or diagonal2 == 2:
+        elif (self.horizontal1 or self.horizontal2 or self.horizontal3 or self.vertical1 or self.vertical2 or self.vertical3 or self.diagonal1 or self.diagonal2) == 2:
             return 2
         #Neste caso deu velha, ou seja, empate!
-        elif (horizontal1 or horizontal2 or horizontal3 or vertical1 or vertical2 or vertical3 or diagonal1 or diagonal2) != (1 and 2):
+        elif (self.horizontal1 or self.horizontal2 or self.horizontal3 or self.vertical1 or self.vertical2 or self.vertical3 or self.diagonal1 or self.diagonal2) != (1 and 2):
             return 0 
         #neste caso o jogo não acabou!
         else:

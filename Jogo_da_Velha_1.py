@@ -153,6 +153,14 @@ class Tabuleiro:
     def verifica(self):
         self.meu_jogo.verifica_ganhador()
         if self.meu_jogo.verifica_ganhador == (1 or 2 or 0):
+            if self.meu_jogo.jogador == 1:         
+                self.label = tk.Label(self.window, text = "O vencedor é: X")
+                self.label.grid(row = 4)
+                self.label.configure(height=1)  
+            else:
+                self.label = tk.Label(self.window, text = "O vencedor é: O")
+                self.label.grid(row = 4)
+                self.label.configure(height=1)
             self.meu_jogo.limpa_jogada()
         else:
             return -1
@@ -163,6 +171,7 @@ class Tabuleiro:
         else:
             self.label["text"] = "Próxima jogada: X"  
             
+    
     def iniciar(self):
         self.window.mainloop() 
 
