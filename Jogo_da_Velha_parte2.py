@@ -63,25 +63,15 @@ class Jogo:
             elif self.A[0][2]==2:
                 return 2
         
-<<<<<<< HEAD
-        #Conferir quem ganhou o jogo.
-        
-=======
+
         #Neste caso deu velha, ou seja, empate!
         elif self.A[0][0]!=0 and self.A[0][1]!=0 and self.A[0][2]!=0 and self.A[1][0]!=0 and self.A[1][1]!=0 and self.A[1][2]!=0 and self.A[2][0]!=0 and self.A[2][1]!=0 and self.A[2][2]!=0:
             return 0
           
->>>>>>> 33b52f9ba81717504366188b08a35e4aebdefede
         #neste caso o jogo não acabou!
         else:
             return -1
 
-
-        #neste caso o jogo não acabou!
-        
-
-   
-   
    #limpa o tabuleiro de lista e sublista!         
     def limpa_jogada(self):
         self.tabuleiro = [[0,0,0], [0,0,0], [0,0,0]]
