@@ -111,6 +111,7 @@ class Tabuleiro:
         self.mudar_Label()
         self.verifica()
         
+<<<<<<< HEAD
     def verifica(self):
         print(self.meu_jogo.verifica_ganhador())        
         if self.meu_jogo.verifica_ganhador() == (1 or 2 or 0):           
@@ -120,6 +121,17 @@ class Tabuleiro:
                 self.label2["text"] = "O vencedor é: O"
             else:
                 self.label2["text"] = "O vencedor é:VELHA!"
+=======
+    def verifica(self): 
+        if self.meu_jogo.verifica_ganhador() == 1:         
+              self.label2["text"] = "O vencedor é: X"
+              self.meu_jogo.limpa_jogada()
+        elif self.meu_jogo.verifica_ganhador() == 2:         
+            self.label2["text"] = "O vencedor é: O"
+            self.meu_jogo.limpa_jogada()
+        elif self.meu_jogo.verifica_ganhador() == 0:
+            self.label2["text"] = "O vencedor é:VELHA!"
+>>>>>>> 33b52f9ba81717504366188b08a35e4aebdefede
             self.meu_jogo.limpa_jogada()
             self.cria_botao()
         else:
