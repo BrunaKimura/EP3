@@ -9,13 +9,10 @@ class Jogo:
     def recebe_jogada(self, linha, coluna):
         if self.A[linha][coluna] == 0:        
             self.A[linha][coluna]= self.jogador
-            print(self.A)
-        
-        
-        if self.jogador == 1:
-            self.jogador = 2
-        else:
-            self.jogador = 1
+            if self.jogador == 1:
+                self.jogador = 2
+            else:
+                self.jogador = 1
             
             
     def verifica_ganhador(self):
