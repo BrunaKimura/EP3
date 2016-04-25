@@ -61,14 +61,7 @@ class Jogo:
                 return 2
         
         #Neste caso deu velha, ou seja, empate!
-        for i in range(0,3):
-            for j in range(0,3):
-                if self.A[i][j]==0:
-                    return -1
-                    print("continue")
-                else:
-                    return 0
-                    print("Acabou")
+        
           
         #neste caso o jogo não acabou!
    
