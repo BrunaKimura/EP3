@@ -52,7 +52,7 @@ class Jogo:
         if self.A[0][0]==self.A[1][1] and self.A[0][0]==self.A[2][2]:
             if self.A[0][0]==1:
                 return 1
-            elif if self.A[0][0]==2:
+            elif self.A[0][0]==2:
                 return 2
         if self.A[0][2]==self.A[0][1] and self.A[0][2]==self.A[2][0]:
             if self.A[0][2]==1:
