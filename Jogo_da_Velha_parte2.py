@@ -33,44 +33,44 @@ class Jogo:
             elif self.A[2][0]==2:
                 return 2
         
-        if self.A[0][0]==self.A[1][0] and self.A[0][0]==self.A[2][0]:
+        elif self.A[0][0]==self.A[1][0] and self.A[0][0]==self.A[2][0]:
             if self.A[0][0]==1:
                 return 1
             elif self.A[0][0]==2:
                 return 2
-        if self.A[0][1]==self.A[1][1] and self.A[0][1]==self.A[2][1]:
+        elif self.A[0][1]==self.A[1][1] and self.A[0][1]==self.A[2][1]:
             if self.A[0][1]==1:
                 return 1
             elif self.A[0][1]==2:
                 return 2
-        if self.A[0][2]==self.A[1][2] and self.A[0][2]==self.A[2][2]:
+        elif self.A[0][2]==self.A[1][2] and self.A[0][2]==self.A[2][2]:
             if self.A[0][2]==1:
                 return 1
             elif self.A[0][2]==2:
                 return 2
         
-        if self.A[0][0]==self.A[1][1] and self.A[0][0]==self.A[2][2]:
+        elif self.A[0][0]==self.A[1][1] and self.A[0][0]==self.A[2][2]:
             if self.A[0][0]==1:
                 return 1
             elif self.A[0][0]==2:
                 return 2
-        if self.A[0][2]==self.A[0][1] and self.A[0][2]==self.A[2][0]:
+        elif self.A[0][2]==self.A[0][1] and self.A[0][2]==self.A[2][0]:
             if self.A[0][2]==1:
                 return 1
             elif self.A[0][2]==2:
                 return 2
         
-        #Conferir quem ganhou o jogo.
-        if (self.horizontal1 or self.horizontal2 or self.horizontal3 or self.vertical1 or self.vertical2 or self.vertical3 or self.diagonal1 or self.diagonal2) == (1):
-            return 1
-        elif (self.horizontal1 or self.horizontal2 or self.horizontal3 or self.vertical1 or self.vertical2 or self.vertical3 or self.diagonal1 or self.diagonal2) == (2):
-            return 2
         #Neste caso deu velha, ou seja, empate!
-        elif (self.horizontal1 or self.horizontal2 or self.horizontal3 or self.vertical1 or self.vertical2 or self.vertical3 or self.diagonal1 or self.diagonal2) != (1 and 2):
-            return 0 
+        for i in range(0,3):
+            for j in range(0,3):
+                if self.A[i][j]==0:
+                    return -1
+                    print("continue")
+                else:
+                    return 0
+                    print("Acabou")
+          
         #neste caso o jogo não acabou!
-        else:
-            return -1
    
    
    #limpa o tabuleiro de lista e sublista!         
