@@ -3,8 +3,7 @@ from Jogo_da_Velha_parte2 import Jogo
 
 class Tabuleiro:
     
-    def __init__ (self): 
-            
+    def __init__ (self):          
         self.window = tk.Tk()
         self.window.title("Jogo da Velha!")
         self.window.configure(height=64, width=42)
@@ -116,9 +115,11 @@ class Tabuleiro:
         if self.meu_jogo.verifica_ganhador() == 1:         
             self.label2["text"] = "O vencedor é: X"
             self.meu_jogo.limpa_jogada()
+            self.cria_botao()
         elif self.meu_jogo.verifica_ganhador() == 2:         
             self.label2["text"] = "O vencedor é: O"
             self.meu_jogo.limpa_jogada()
+            self.cria_botao()
         elif self.meu_jogo.verifica_ganhador() == 0:
             self.label2["text"] = "O vencedor é:VELHA!"
             self.meu_jogo.limpa_jogada()
