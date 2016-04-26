@@ -11,6 +11,8 @@ class Tabuleiro:
         
         self.meu_jogo = Jogo()
         
+        self.boxmessage = messagebox
+        
         self.cria_botao()
         
         self.label = tk.Label(self.window, text = "Próxima jogada: X")
@@ -114,16 +116,19 @@ class Tabuleiro:
 
     def verifica(self): 
         if self.meu_jogo.verifica_ganhador() == 1:         
-            self.label2["text"] = "O vencedor é: X"
+            self.label2["text"] = "O último vencedor foi X"
             self.meu_jogo.limpa_jogada()
+            self.boxmessage.showinfo("Resultado:", "O vencedor é X")
             self.cria_botao()
         elif self.meu_jogo.verifica_ganhador() == 2:         
-            self.label2["text"] = "O vencedor é: O"
+            self.label2["text"] = "O úlimo vencedor foi O"
             self.meu_jogo.limpa_jogada()
+            self.boxmessage.showinfo("Resultado:", "O vencedor é O")
             self.cria_botao()
         elif self.meu_jogo.verifica_ganhador() == 0:
-            self.label2["text"] = "O vencedor é:VELHA!"
+            self.label2["text"] = "O útimo deu VELHA!"
             self.meu_jogo.limpa_jogada()
+            self.boxmessage.showinfo("Resultado:", "Deu VELHA!")
             self.cria_botao()
         else:
             return -1
@@ -181,7 +186,8 @@ class Tabuleiro:
         self.botao9.configure(height=7, width=14)
 
     def iniciar(self):
-        self.window.mainloop() 
+        self.window.mainloop()
+
 
 jogo = Tabuleiro()
 jogo.iniciar()
