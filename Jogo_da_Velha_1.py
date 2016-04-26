@@ -27,9 +27,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(0, 0)
         self.meu_jogo.jogador
         if self.meu_jogo.A[0][0] == 1:
-            self.botao1.configure(text="X")
+            self.botao1.configure(text="X",bg = 'brown', fg="pink")
         else:
-            self.botao1.configure(text="O")
+            self.botao1.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
@@ -37,9 +37,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(0, 1)
         self.meu_jogo.jogador
         if self.meu_jogo.A[0][1] == 1:
-            self.botao2.configure(text="X")
+            self.botao2.configure(text="X", bg = 'brown', fg="pink")
         else:
-            self.botao2.configure(text="O")
+            self.botao2.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
@@ -47,9 +47,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(0, 2)
         self.meu_jogo.jogador
         if self.meu_jogo.A[0][2] == 1:
-            self.botao3.configure(text="X")
+            self.botao3.configure(text="X", bg = 'brown', fg="pink")
         else:
-            self.botao3.configure(text="O")
+            self.botao3.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
@@ -57,9 +57,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(1, 0)
         self.meu_jogo.jogador
         if self.meu_jogo.A[1][0] == 1:
-            self.botao4.configure(text="X")
+            self.botao4.configure(text="X", bg = 'brown', fg="pink")
         else:
-            self.botao4.configure(text="O")
+            self.botao4.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
@@ -67,9 +67,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(1, 1)
         self.meu_jogo.jogador
         if self.meu_jogo.A[1][1] == 1:
-            self.botao5.configure(text="X")
+            self.botao5.configure(text="X", bg = 'brown', fg="pink")
         else:
-            self.botao5.configure(text="O")
+            self.botao5.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
@@ -77,9 +77,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(1, 2)
         self.meu_jogo.jogador
         if self.meu_jogo.A[1][2] == 1:
-            self.botao6.configure(text="X")
+            self.botao6.configure(text="X", bg = 'brown', fg="pink")
         else:
-            self.botao6.configure(text="O")
+            self.botao6.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
@@ -87,9 +87,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(2, 0)
         self.meu_jogo.jogador
         if self.meu_jogo.A[2][0] == 1:
-            self.botao7.configure(text="X")
+            self.botao7.configure(text="X", bg = 'brown', fg="pink")
         else:
-            self.botao7.configure(text="O")
+            self.botao7.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
@@ -97,9 +97,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(2, 1)
         self.meu_jogo.jogador
         if self.meu_jogo.A[2][1] == 1:
-            self.botao8.configure(text="X")
+            self.botao8.configure(text="X", bg = 'brown', fg="pink")
         else:
-            self.botao8.configure(text="O")
+            self.botao8.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
@@ -107,9 +107,9 @@ class Tabuleiro:
         self.meu_jogo.recebe_jogada(2, 2)
         self.meu_jogo.jogador 
         if self.meu_jogo.A[2][2] == 1:
-            self.botao9.configure(text="X")
+            self.botao9.configure(text="X", bg = 'brown', fg="pink")
         else:
-            self.botao9.configure(text="O")
+            self.botao9.configure(text="O", bg = 'pink', fg="brown")
         self.mudar_Label()
         self.verifica()
         
