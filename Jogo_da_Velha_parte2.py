@@ -16,51 +16,27 @@ class Jogo:
             
             
     def verifica_ganhador(self):
-         #todos modos possíveis de ganhar e as condições para saber se foi o jogador 1 ou 2 quem ganhou!
-        if self.A[0][0]==self.A[0][1] and self.A[0][0]==self.A[0][2]:
-            if self.A[0][0]==1:
-                return 1
-            elif self.A[0][0]==2:
-                return 2     
-        elif self.A[1][0]==self.A[1][1] and self.A[1][0]==self.A[1][2]:
-            if self.A[1][0]==1:
-                return 1
-            elif self.A[1][0]==2:
-                return 2
-        elif self.A[2][0]==self.A[2][1] and self.A[2][0]==self.A[2][2]:
-            if self.A[2][0]==1:
-                return 1
-            elif self.A[2][0]==2:
-                return 2
         
-        elif self.A[0][0]==self.A[1][0] and self.A[0][0]==self.A[2][0]:
-            if self.A[0][0]==1:
-                return 1
-            elif self.A[0][0]==2:
-                return 2
-        elif self.A[0][1]==self.A[1][1] and self.A[0][1]==self.A[2][1]:
-            if self.A[0][1]==1:
-                return 1
-            elif self.A[0][1]==2:
-                return 2
-        elif self.A[0][2]==self.A[1][2] and self.A[0][2]==self.A[2][2]:
-            if self.A[0][2]==1:
-                return 1
-            elif self.A[0][2]==2:
-                return 2
+        if (self.A[0][0]==self.A[0][1] and self.A[0][0]==self.A[0][2] and self.A[0][0]==1 or
+        self.A[1][0]==self.A[1][1] and self.A[1][0]==self.A[1][2] and self.A[1][0]==1 or
+        self.A[2][0]==self.A[2][1] and self.A[2][0]==self.A[2][2] and self.A[2][0]==1 or
+        self.A[0][0]==self.A[1][0] and self.A[0][0]==self.A[2][0] and self.A[0][0]==1 or
+        self.A[0][1]==self.A[1][1] and self.A[0][1]==self.A[2][1] and self.A[0][1]==1 or
+        self.A[0][2]==self.A[1][2] and self.A[0][2]==self.A[2][2] and self.A[0][2]==1 or
+        self.A[0][0]==self.A[1][1] and self.A[0][0]==self.A[2][2] and self.A[0][0]==1 or
+        self.A[0][2]==self.A[1][1] and self.A[0][2]==self.A[2][0] and self.A[0][2]==1):
+               return 1
+            
+        if (self.A[0][0]==self.A[0][1] and self.A[0][0]==self.A[0][2] and self.A[0][0]==2 or
+        self.A[1][0]==self.A[1][1] and self.A[1][0]==self.A[1][2] and self.A[1][0]==2 or
+        self.A[2][0]==self.A[2][1] and self.A[2][0]==self.A[2][2] and self.A[2][0]==2 or
+        self.A[0][0]==self.A[1][0] and self.A[0][0]==self.A[2][0] and self.A[0][0]==2 or
+        self.A[0][1]==self.A[1][1] and self.A[0][1]==self.A[2][1] and self.A[0][1]==2 or
+        self.A[0][2]==self.A[1][2] and self.A[0][2]==self.A[2][2] and self.A[0][2]==2 or
+        self.A[0][0]==self.A[1][1] and self.A[0][0]==self.A[2][2] and self.A[0][0]==2 or
+        self.A[0][2]==self.A[1][1] and self.A[0][2]==self.A[2][0] and self.A[0][2]==2):
+            return 2
         
-        elif self.A[0][0]==self.A[1][1] and self.A[0][0]==self.A[2][2]:
-            if self.A[0][0]==1:
-                return 1
-            elif self.A[0][0]==2:
-                return 2
-        elif self.A[0][2]==self.A[1][1] and self.A[0][2]==self.A[2][0]:
-            if self.A[0][2]==1:
-                return 1
-            elif self.A[0][2]==2:
-                return 2
-         
-
         #Neste caso deu velha, ou seja, empate!
         elif self.A[0][0]!=0 and self.A[0][1]!=0 and self.A[0][2]!=0 and self.A[1][0]!=0 and self.A[1][1]!=0 and self.A[1][2]!=0 and self.A[2][0]!=0 and self.A[2][1]!=0 and self.A[2][2]!=0:
             return 0

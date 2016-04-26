@@ -7,7 +7,7 @@ class Tabuleiro:
     def __init__ (self):          
         self.window = tk.Tk()
         self.window.title("Jogo da Velha!")
-        self.window.configure(height=64, width=42)
+        self.window.configure(height=80, width=42)
         
         self.meu_jogo = Jogo()
         
@@ -25,7 +25,6 @@ class Tabuleiro:
         
     def clicar1 (self):
         self.meu_jogo.recebe_jogada(0, 0)
-        self.meu_jogo.jogador
         if self.meu_jogo.A[0][0] == 1:
             self.botao1.configure(text="X",bg = 'brown', fg="pink")
         else:
@@ -35,7 +34,6 @@ class Tabuleiro:
         
     def clicar2 (self):
         self.meu_jogo.recebe_jogada(0, 1)
-        self.meu_jogo.jogador
         if self.meu_jogo.A[0][1] == 1:
             self.botao2.configure(text="X", bg = 'brown', fg="pink")
         else:
@@ -45,7 +43,6 @@ class Tabuleiro:
         
     def clicar3 (self):
         self.meu_jogo.recebe_jogada(0, 2)
-        self.meu_jogo.jogador
         if self.meu_jogo.A[0][2] == 1:
             self.botao3.configure(text="X", bg = 'brown', fg="pink")
         else:
@@ -55,7 +52,6 @@ class Tabuleiro:
         
     def clicar4 (self):
         self.meu_jogo.recebe_jogada(1, 0)
-        self.meu_jogo.jogador
         if self.meu_jogo.A[1][0] == 1:
             self.botao4.configure(text="X", bg = 'brown', fg="pink")
         else:
@@ -65,7 +61,6 @@ class Tabuleiro:
         
     def clicar5 (self):
         self.meu_jogo.recebe_jogada(1, 1)
-        self.meu_jogo.jogador
         if self.meu_jogo.A[1][1] == 1:
             self.botao5.configure(text="X", bg = 'brown', fg="pink")
         else:
@@ -75,7 +70,6 @@ class Tabuleiro:
         
     def clicar6 (self):
         self.meu_jogo.recebe_jogada(1, 2)
-        self.meu_jogo.jogador
         if self.meu_jogo.A[1][2] == 1:
             self.botao6.configure(text="X", bg = 'brown', fg="pink")
         else:
@@ -85,7 +79,6 @@ class Tabuleiro:
         
     def clicar7 (self):
         self.meu_jogo.recebe_jogada(2, 0)
-        self.meu_jogo.jogador
         if self.meu_jogo.A[2][0] == 1:
             self.botao7.configure(text="X", bg = 'brown', fg="pink")
         else:
@@ -95,7 +88,6 @@ class Tabuleiro:
         
     def clicar8 (self):
         self.meu_jogo.recebe_jogada(2, 1)
-        self.meu_jogo.jogador
         if self.meu_jogo.A[2][1] == 1:
             self.botao8.configure(text="X", bg = 'brown', fg="pink")
         else:
@@ -105,7 +97,6 @@ class Tabuleiro:
         
     def clicar9 (self):
         self.meu_jogo.recebe_jogada(2, 2)
-        self.meu_jogo.jogador 
         if self.meu_jogo.A[2][2] == 1:
             self.botao9.configure(text="X", bg = 'brown', fg="pink")
         else:
@@ -143,47 +134,47 @@ class Tabuleiro:
         self.botao1 = tk.Button(self.window)
         self.botao1.grid(row = 0, column = 0)
         self.botao1.configure(command = self.clicar1)
-        self.botao1.configure(height=7, width=14)
+        self.botao1.configure(height=10, width=20)
 
         self.botao2 = tk.Button(self.window)
         self.botao2.grid(row = 0, column = 1)
         self.botao2.configure(command = self.clicar2)
-        self.botao2.configure(height=7, width=14)
+        self.botao2.configure(height=10, width=20)
 
         self.botao3 = tk.Button(self.window)
         self.botao3.grid(row = 0, column = 2)
         self.botao3.configure(command = self.clicar3)
-        self.botao3.configure(height=7, width=14)
+        self.botao3.configure(height=10, width=20)
 
         self.botao4 = tk.Button(self.window)
         self.botao4.grid(row = 1, column = 0)
         self.botao4.configure(command = self.clicar4)
-        self.botao4.configure(height=7, width=14)
+        self.botao4.configure(height=10, width=20)
 
         self.botao5 = tk.Button(self.window)
         self.botao5.grid(row = 1, column = 1)
         self.botao5.configure(command = self.clicar5)
-        self.botao5.configure(height=7, width=14)
+        self.botao5.configure(height=10, width=20)
 
         self.botao6 = tk.Button(self.window)
         self.botao6.grid(row = 1, column = 2)
         self.botao6.configure(command = self.clicar6)
-        self.botao6.configure(height=7, width=14)
+        self.botao6.configure(height=10, width=20)
 
         self.botao7 = tk.Button(self.window)
         self.botao7.grid(row = 2, column = 0)
         self.botao7.configure(command = self.clicar7)
-        self.botao7.configure(height=7, width=14)
+        self.botao7.configure(height=10, width=20)
 
         self.botao8 = tk.Button(self.window)
         self.botao8.grid(row = 2, column = 1)
         self.botao8.configure(command = self.clicar8)
-        self.botao8.configure(height=7, width=14)
+        self.botao8.configure(height=10, width=20)
 
         self.botao9 = tk.Button(self.window)
         self.botao9.grid(row = 2, column = 2)
         self.botao9.configure(command = self.clicar9)
-        self.botao9.configure(height=7, width=14)
+        self.botao9.configure(height=10, width=20)
 
     def iniciar(self):
         self.window.mainloop()
