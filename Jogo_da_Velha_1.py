@@ -1,5 +1,6 @@
 import tkinter as tk
 from Jogo_da_Velha_parte2 import Jogo
+from tkinter import messagebox
 
 class Tabuleiro:
     
