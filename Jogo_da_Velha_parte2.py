@@ -59,7 +59,7 @@ class Jogo:
                 return 1
             elif self.A[0][2]==2:
                 return 2
-        
+         
 
         #Neste caso deu velha, ou seja, empate!
         elif self.A[0][0]!=0 and self.A[0][1]!=0 and self.A[0][2]!=0 and self.A[1][0]!=0 and self.A[1][1]!=0 and self.A[1][2]!=0 and self.A[2][0]!=0 and self.A[2][1]!=0 and self.A[2][2]!=0:
