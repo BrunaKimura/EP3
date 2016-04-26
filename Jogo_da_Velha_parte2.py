@@ -54,7 +54,7 @@ class Jogo:
                 return 1
             elif self.A[0][0]==2:
                 return 2
-        elif self.A[0][2]==self.A[0][1] and self.A[0][2]==self.A[2][0]:
+        elif self.A[0][2]==self.A[1][1] and self.A[0][2]==self.A[2][0]:
             if self.A[0][2]==1:
                 return 1
             elif self.A[0][2]==2:
